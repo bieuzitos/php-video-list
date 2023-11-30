@@ -1,0 +1,67 @@
+:root {
+  /*
+  |--------------------------------------------------------------------------
+  | Background
+  |--------------------------------------------------------------------------
+  */
+
+  --background-color: #1E1E1E;
+  --background-color-primary: #303030;
+  --background-color-secondary: #393939;
+  --background-color-tertiary: #454545;
+
+  /*
+  |--------------------------------------------------------------------------
+  | Border Color
+  |--------------------------------------------------------------------------
+  */
+
+  --border-color-primary: #E1E1E6;
+  --border-color-secondary: #8D8D99;
+
+  /*
+  |--------------------------------------------------------------------------
+  | Text Color
+  |--------------------------------------------------------------------------
+  */
+
+  --text-color: #FFFFFF;
+  --text-color-primary: #E1E1E6;
+  --text-color-secondary: #C4C4CC;
+  --text-color-tertiary: #8d8d99;
+
+  /*
+  |--------------------------------------------------------------------------
+  | Colors
+  |--------------------------------------------------------------------------
+  */
+
+  --base-primary: #0055B3;
+  --base-secondary: #003E7A;
+
+  --danger-primary: #FF8360;
+  --danger-secondary: #D9534F;
+
+  --success-primary: #6BD47A;
+  --success-secondary: #4CAF50;
+
+  /*
+  |--------------------------------------------------------------------------
+  | Sizes
+  |--------------------------------------------------------------------------
+  */
+
+  --box-shadow: .75;
+
+  --border-radius: 1rem;
+  --border-radius-primary: .75rem;
+  --border-radius-secondary: .5rem;
+  --border-radius-tertiary: .25rem;
+
+  --zindex-dropdown: 1000;
+  --zindex-fixed: 1020;
+  --zindex-modal: 1030;
+  --zindex-popover: 1040;
+  --zindex-tooltip: 1050;
+  --zindex-notification: 1100;
+}

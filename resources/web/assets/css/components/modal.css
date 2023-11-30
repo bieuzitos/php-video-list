@@ -1,0 +1,170 @@
+
+/* 
+ * 
+ * MODAL
+ * 
+ */
+.modal {
+  z-index: var(--zindex-modal);
+  position: fixed;
+  top: 0; left: 0;
+  display: none;
+  width: 100%; height: 100%;
+  background-color: rgba(30, 30, 30, .8);
+  overflow-x: hidden; overflow-y: auto;
+  outline: 0
+}
+
+/* MODAL - DIALOG */
+.modal .modal-dialog {
+  pointer-events: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100% - 1rem);
+  margin: .5rem;
+  transition: transform .3s ease-out;
+  transform: translate(0, -50px);
+}
+.modal.show .modal-dialog {
+  transform: none;
+}
+.modal.modal-static .modal-dialog {
+  transform: scale(1.02);
+}
+
+/* MODAL - CONTENT */
+.modal .modal-content {
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1268px;
+  border-radius: var(--border-radius-primary);
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, var(--box-shadow));
+  background-color: var(--background-color-primary);
+}
+.modal .modal-content.small {
+  width: 450px;
+}
+
+/* MODAL - HEADER */
+.modal .modal-content .modal-header {
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: var(--border-radius-primary);
+  border-top-right-radius: var(--border-radius-primary);
+  background-color: var(--background-color-secondary);
+  padding: .75rem;
+}
+
+/* MODAL - HEADER | TITLE */
+.modal .modal-content .modal-header .modal-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color-primary);
+}
+
+/* MODAL - HEADER | ACTION */
+.modal .modal-content .modal-header .modal-action {
+  display: flex;
+  align-items: center;
+}
+
+/* MODAL - HEADER | ACTION - BUTTON */
+.modal .modal-content .modal-header .modal-action .modal-button {
+  margin-left: .5rem;
+}
+.modal .modal-content .modal-header .modal-action .modal-button button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px; height: 28px;
+  border-radius: var(--border-radius-secondary);
+  background-color: transparent;
+  font-size: 16px;
+  color: var(--text-color-secondary);
+  transition: background-color .15s ease-in-out, color .15s ease-in-out;
+  cursor: pointer;
+}
+.modal .modal-content .modal-header .modal-action .modal-button button:hover {
+  background-color: var(--background-color-tertiary);
+  color: var(--text-color-primary);
+}
+
+/* MODAL - BODY */
+.modal .modal-content .modal-body {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  padding: .75rem;
+}
+
+/* MODAL - FOOTER */
+.modal .modal-content .modal-footer {
+  user-select: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px solid var(--background-color-secondary);
+  padding: .75rem;
+}
+
+/* MODAL - FOOTER | BUTTON */
+.modal .modal-content .modal-footer .modal-button.hidden {
+  display: none;
+}
+.modal .modal-content .modal-footer .modal-button.disabled,
+.modal .modal-content .modal-footer .modal-button.inactive {
+  cursor: not-allowed;
+}
+.modal .modal-content .modal-footer .modal-button.transparent:not(:last-child) {
+  margin-right: .75rem;
+}
+.modal .modal-content .modal-footer .modal-button.transparent button,
+.modal .modal-content .modal-footer .modal-button.transparent a {
+  background-color: transparent;
+  color: var(--text-color-secondary);
+}
+.modal .modal-content .modal-footer .modal-button.transparent button:hover,
+.modal .modal-content .modal-footer .modal-button.transparent a:hover {
+  background-color: var(--background-color-secondary);
+  color: var(--text-color-primary);
+}
+.modal .modal-content .modal-footer .modal-button button,
+.modal .modal-content .modal-footer .modal-button a {
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto; height: 35px;
+  border-radius: var(--border-radius-secondary);
+  background-color: var(--base-primary);
+  padding: 0 1.25rem;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-color-primary);
+  cursor: pointer;
+  transition: background-color .15s ease-in-out, color .15s ease-in-out;
+}
+.modal .modal-content .modal-footer .modal-button button:hover,
+.modal .modal-content .modal-footer .modal-button a:hover {
+  background-color: var(--base-secondary);
+}
+.modal .modal-content .modal-footer .modal-button button.disabled,
+.modal .modal-content .modal-footer .modal-button a.disabled {
+  pointer-events: none;
+  background-color: var(--background-color-secondary);
+  color: var(--text-color-primary);
+  opacity: .6;
+}
+.modal .modal-content .modal-footer .modal-button button.inactive,
+.modal .modal-content .modal-footer .modal-button a.inactive {
+  pointer-events: none;
+  background-color: var(--base-primary);
+  color: var(--text-color-primary);
+  opacity: .6;
+}

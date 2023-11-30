@@ -1,0 +1,151 @@
+
+/** 
+ *
+ * INPUT
+ *
+ */
+.input {
+  position: relative;
+}
+
+.input input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: 2px solid var(--border-color-secondary);
+  border-radius: var(--border-radius-primary);
+  background-color: transparent;
+  padding: .85rem 3.5rem .85rem 2.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color-primary);
+  transition: border-color .15s ease-in-out, color .15s ease-in-out;
+}
+
+/* INPUT - ICON */
+.input .icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 14px; left: 10px;
+  width: 24px; height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--border-color-secondary);
+  transition: color .15s ease-in-out;
+}
+
+/* INPUT - SUBMIT */
+.input .submit {
+  position: absolute;
+  top: 8px; right: 8px;
+}
+.input .submit.disabled,
+.input .submit.inactive {
+  cursor: not-allowed;
+}
+
+/* INPUT - SUBMIT | BUTTON */
+.input .submit button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px; height: 35px;
+  border-radius: var(--border-radius-secondary);
+  background-color: var(--background-color-secondary);
+  color: var(--text-color-secondary);
+  transition: background-color .15s ease-in-out, color .15s ease-in-out;
+  cursor: pointer;
+}
+.input .submit button:hover {
+  background-color: var(--base-primary);
+  color: var(--text-color-primary);
+}
+.input .submit button.disabled, 
+.input .submit button.inactive {
+  pointer-events: none;
+  color: var(--text-color-primary);
+  opacity: .6;
+}
+.input .submit button.disabled {
+  background-color: var(--background-color-secondary);
+}
+.input .submit button.inactive {
+  background-color: var(--base-primary);
+}
+
+/* INPUT - LABEL */
+.input input ~ label {
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  top: 25px; left: 0;
+  border-radius: var(--border-radius-tertiary);
+  background-color: transparent;
+  margin: 0 2.25rem;
+  padding: 0 .4rem;
+  font-size: 16px;
+  color: var(--text-color-secondary);
+  transform: translateY(-50%);
+  transform-origin: left top;
+  transition: .15s ease-in-out;
+}
+
+/* INPUT - FOCUS */
+.input input:focus {
+  border-color: var(--base-primary);
+}
+
+/* INPUT - FOCUS | LABEL */
+.input input:focus ~ label,
+.input input:not(:focus):not(:placeholder-shown) ~ label {
+  top: 0;
+  background-color: var(--background-color-primary);
+  margin: 0 1rem;
+  opacity: 1;
+  transform: translateY(-50%) scale(.9);
+}
+
+/* INPUT - FOCUS | ICON */
+.input input:focus ~ .icon {
+  color: var(--base-primary);
+}
+
+/* INPUT - PLACEHOLDER */
+.input input::placeholder {
+  user-select: none;
+  opacity: 0;
+}
+.input input:not(:focus):not(:placeholder-shown) {
+  border-color: var(--border-color-primary);
+}
+
+/* INPUT - ERROR */
+.input input.error {
+  border-color: var(--danger-primary);
+}
+
+/* INPUT - ERROR | SPAN */
+.input input.error ~ span.error {
+  user-select: none;
+  font-size: 12px !important;
+  color: var(--danger-primary) !important;
+}
+
+/* INPUT - ERROR | ICON */
+.input input.error ~ .icon {
+  color: var(--danger-primary);
+}
+
+/* INPUT - ERROR, PLACEHOLDER */
+.input input.error:not(:focus):not(:placeholder-shown) {
+  border-color: var(--danger-primary);
+}
+
+/* INPUT - ERROR, PLACEHOLDER | ICON */
+.input input.error:not(:focus):not(:placeholder-shown) ~ .icon {
+  color: var(--danger-primary);
+}

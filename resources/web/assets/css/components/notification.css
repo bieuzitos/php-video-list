@@ -1,0 +1,155 @@
+
+/*
+ *
+ * NOTIFICATION 
+ *
+ */
+#notification {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: var(--zindex-notification);
+  width: auto;
+}
+
+/* NOTIFICATION - POSITION */
+#notification.top-left {
+  top: 1rem; left: 1rem;
+}
+#notification.top-right {
+  top: 1rem; right: 1rem;
+}
+#notification.bottom-left {
+  bottom: 1rem; left: 1rem;
+}
+#notification.bottom-right {
+  bottom: 1rem; right: 1rem;
+}
+
+/* NOTIFICATION - CONTENT */
+#notification .notification-content {
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  height: auto;
+  max-width: 400px;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-primary);
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, var(--box-shadow));
+  background-color: var(--background-color-primary);
+  padding: .75rem 1rem;
+}
+#notification .notification-content:not(:first-child) {
+  margin-top: .75rem;
+}
+
+/* NOTIFICATION - CONTENT | STATUS */
+#notification .notification-content.info {
+  border-color: var(--info-primary);
+}
+#notification .notification-content.success {
+  border-color: var(--success-primary);
+}
+#notification .notification-content.warning {
+  border-color: var(--warning-primary);
+}
+#notification .notification-content.error {
+  border-color: var(--danger-primary);
+}
+
+/* NOTIFICATION - ICON */
+#notification .notification-content .notification-icon {
+  margin-right: .75rem;
+  font-size: 16px;
+}
+#notification .notification-content .notification-icon i {
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+/* NOTIFICATION - ICON | STATUS */
+#notification .notification-content.info .notification-icon i::before {
+  content: '\f05a';
+  color: var(--info-primary);
+}
+#notification .notification-content.success .notification-icon i::before {
+  content: '\f058';
+  color: var(--success-primary);
+}
+#notification .notification-content.warning .notification-icon i::before {
+  content: '\f06a';
+  color: var(--warning-primary);
+}
+#notification .notification-content.error .notification-icon i::before {
+  content: '\f057';
+  color: var(--danger-primary);
+}
+
+/* NOTIFICATION - MESSAGE */
+#notification .notification-content .notification-message {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-color-secondary);
+}
+
+/* NOTIFICATION - BUTTON | CLOSE */
+#notification .notification-content .notification-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+#notification .notification-content .notification-close button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: .25rem;
+  background-color: var(--background-color-secondary);
+  font-size: 14px;
+  color: var(--text-color-secondary);
+  transition: background-color .15s ease-in-out, color .15s ease-in-out;
+  cursor: pointer;
+}
+#notification .notification-content .notification-close button:hover {
+  background-color: var(--background-color-tertiary);
+  color: var(--text-color-primary);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Sizes
+|--------------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 480px) {
+  /* NOTIFICATION */
+  #notification {
+    align-items: center;
+    top: 1rem; left: 1rem; right: 1rem;
+    width: auto;
+  }
+
+  /* NOTIFICATION - CONTENT */
+  #notification .notification-content {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 1rem;
+  }
+
+  /* NOTIFICATION - MESSAGE */
+  #notification .notification-content .notification-message {
+    width: 100%;
+  }
+}

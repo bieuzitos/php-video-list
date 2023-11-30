@@ -1,0 +1,183 @@
+
+/**
+ *
+ * LIST
+ *
+ */
+.list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+
+/* LIST - HEADER */
+.list .list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.25rem;
+}
+.list .list-header .list-title,
+.list .list-header .list-count {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-color-primary);
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.list .list-header .list-count {
+  margin-left: .75rem;
+  color: var(--text-color-tertiary);
+}
+
+/* LIST - MIDDLE | CONTENT */
+.list .list-middle .list-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(174px, 1fr));
+  grid-row-gap: 1.25rem;
+  grid-column-gap: 1rem;
+}
+
+/* LIST - MIDDLE | LINK */
+.list .list-middle .list-content a {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform .25s ease-in-out, z-index .25s;
+  cursor: pointer;
+}
+.list .list-middle .list-content a:hover {
+  z-index: 6;
+  transform: scale(1.1);
+}
+.list .list-middle .list-content a:not(:hover) {
+  transform: scale(1);
+}
+.list .list-middle .list-content a.hidden {
+  display: none !important;
+}
+
+/* LIST - MIDDLE | PICTURE */
+.list .list-middle .list-content a .list-item picture {
+  user-select: none;
+  position: relative;
+  pointer-events: none;
+  position: relative;
+  width: 100%; height: auto;
+}
+
+/* LIST - MIDDLE | PICTURE - IMG */
+.list .list-middle .list-content a .list-item picture img {
+  display: block;
+  width: 100%; height: 100%;
+  border-radius: var(--border-radius-primary);
+}
+.list .list-middle .list-content a .list-item picture:has(img[src=""]) {
+  display: block;
+  height: 134.39px;
+}
+
+/* LIST - MIDDLE | PICTURE - OVERLAY */
+.list .list-middle .list-content a .list-item picture .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; height: 100%;
+  border-radius: var(--border-radius-primary);
+  background-color: var(--background-color-primary);
+  font-size: 52px;
+  color: var(--text-color-secondary);
+  transition: opacity .15s ease-in-out;
+  opacity: 0;
+}
+.list .list-middle .list-content a:hover .list-item picture .overlay {
+  opacity: .7;
+}
+
+/* LIST - MIDDLE | PICTURE - IDENTIFIER */
+.list .list-middle .list-content a .list-item picture .identifier {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -14px; right: .75rem;
+}
+.list .list-middle .list-content a .list-item picture .identifier span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  border: 5px solid var(--background-color);
+  border-radius: 2.5rem;
+  background-color: var(--base-primary);
+  padding: 0 .5rem;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-color-primary);
+}
+
+/* LIST - EMPTY */
+.list .list-middle .list-empty.hidden {
+  display: none;
+}
+.list .list-middle .list-empty {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 4.5rem 0;
+}
+.list .list-middle .list-empty .icon {
+  font-size: 58px;
+  color: var(--text-color-primary);
+}
+.list .list-middle .list-empty .text {
+  margin-top: 1.5rem;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text-color-secondary);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Sizes
+|--------------------------------------------------------------------------
+*/
+
+/* @media (max-width: 1200px) {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+} */

@@ -1,0 +1,7 @@
+Options -MultiViews -Indexes
+
+RewriteEngine On
+
+# ROUTER URL Rewrite
+RewriteCond %{REQUEST_URI} !^public/? [NC]
+RewriteRule ^(.*)$ public/$1 [L,QSA]

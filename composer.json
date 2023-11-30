@@ -1,0 +1,48 @@
+{
+    "name": "bieuzitos/m3u8linkmanager",
+    "description": "Gerenciador de links de transmissão, permite adicionar e listar links M3U8.",
+    "version": "1.0",
+    "type": "project",
+    "license": "proprietary",
+    "minimum-stability": "beta",
+    "authors": [
+        {
+            "name": "Bieuzitos",
+            "email": "suporte@bieuzitos.com",
+            "homepage": "https://www.bieuzitos.com",
+            "role": "Developer"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "cmd-initialize-environment": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php source/bootstrap/scripts/key.php"
+        ]
+    },
+    "require": {
+        "php": "^8.2",
+        "coffeecode/optimizer": "2.1.*",
+        "coffeecode/router": "2.0.*",
+        "league/plates": "3.5.*",
+        "nesbot/carbon": "2.71.*",
+        "rakibtg/sleekdb": "2.*",
+        "respect/validation": "2.2.*",
+        "vlucas/phpdotenv": "5.6.*"
+    },
+    "require-dev": {
+        "matthiasmullie/minify": "1.3.*"
+    }
+}
