@@ -41,4 +41,3 @@ Este script é responsável por gerar o arquivo `.env` necessário para a config
 ## Screenshots
 
 ![App Screenshot](https://raw.githubusercontent.com/bieuzitos/php-video-list/main/public/assets/images/screenshot%20(1).jpg)
-![App Screenshot](https://raw.githubusercontent.com/bieuzitos/php-video-list/main/public/assets/images/preview.mp4)
