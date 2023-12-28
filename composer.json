@@ -1,6 +1,6 @@
 {
-    "name": "bieuzitos/m3u8linkmanager",
-    "description": "Gerenciador de links de transmissão, permite adicionar e listar links M3U8.",
+    "name": "bieuzitos/php-video-list",
+    "description": "Gerenciador de links de transmissão, permite adicionar e listar videos.",
     "version": "1.0",
     "type": "project",
     "license": "proprietary",
@@ -19,11 +19,6 @@
     "autoload": {
         "psr-4": {
             "Source\\": "source/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
         }
     },
     "scripts": {
