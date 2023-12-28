@@ -29,10 +29,8 @@ Este script é responsável por gerar o arquivo `.env` necessário para a config
 
 ## Funcionalidades
 
-- Criação de Categorias
-- Exclusão de Categorias
-- Criação de Videos
-- Exclusão de Videos
+- Criação de Categorias e Video
+- Exclusão de Categorias e Videos
 
 ## Roadmap
 
@@ -41,3 +39,6 @@ Este script é responsável por gerar o arquivo `.env` necessário para a config
 ## Screenshots
 
 ![App Screenshot](https://raw.githubusercontent.com/bieuzitos/php-video-list/main/public/assets/images/screenshot%20(1).jpg)
+![App Screenshot](https://raw.githubusercontent.com/bieuzitos/php-video-list/main/public/assets/images/screenshot%20(2).jpg)
+![App Screenshot](https://raw.githubusercontent.com/bieuzitos/php-video-list/main/public/assets/images/screenshot%20(3).jpg)
+![App Screenshot](https://raw.githubusercontent.com/bieuzitos/php-video-list/main/public/assets/images/screenshot%20(4).jpg)
