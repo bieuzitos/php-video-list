@@ -78,7 +78,7 @@ define('SITE_LOCALE', 'pt_BR');
 */
 
 define('SITE_TITLE', ' • ' . SITE_NAME);
-define('SITE_DESC', '');
+define('SITE_DESC', 'Gerenciador de links de transmissão, permite adicionar e listar videos.');
 define('SITE_DOMAIN', url_replace());
 
 /*
